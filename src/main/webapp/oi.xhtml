@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<h:form>
+		<i> Ola galera</i>
+		<strong> Ola galera</strong>
+
+		<h:inputText name="primeiroCampo" id="primeiroCampo" value="Ola mundo" />
+		<h:commandButton name="btnPrimeiro" id="btnPrimeiro"
+			value="Meu Primeiro Botao" />
+		<h:inputTextarea name="txtArea" id="txtArea" cols="20" rows="30" />
+		<br />
+		<br />
+		<h:commandButton id="btnAlfredo" value="Mostre mais dados do alfredo"
+			action="#{alfredoController.exibirDadosAlfredo}" />
+		<br />
+		<h:outputLabel value="nome : #{alfredoController.nome}" />
+		<br />
+		<h:outputLabel value="Idade : #{alfredoController.idade}" />
+
+		<br />
+
+		<h:inputText name="primeiroValor" id="primeiroValor"
+			value="#{calculadoraController.valor1}" />
+		<br />
+		<h:inputText name="segundoValor" id="segundoValor"
+			value="#{calculadoraController.valor2}" />
+		<br />
+		<h:commandButton id="btnCalculadora" value="somar"
+			action="#{calculadoraController.soma}" />
+		<br />
+		<h:outputLabel value=" Soma: #{calculadoraController.resultado}" />
+		<br />
+		<h:commandButton id="btnCalculadora1" value="subtrair"
+			action="#{calculadoraController.subtrair}" />
+		<br />
+		<h:outputLabel value=" Subtrair: #{calculadoraController.resultado1}" />
+		<br />
+		<h:commandButton id="btnCalculadora2" value="multiplicar"
+			action="#{calculadoraController.multiplicar}" />
+		<br />
+		<h:outputLabel
+			value=" multiplicacao: #{calculadoraController.resultado2}" />
+		<br />
+		<h:commandButton id="btnCalculadora3" value="dividir"
+			action="#{calculadoraController.dividir}" />
+		<br />
+		<h:outputLabel value=" divisao: #{calculadoraController.resultado3}" />
+		<br />
+		<br />
+		<h:inputText name="Palavra" id="Palavra"
+			value="#{letrasController.palavra}" />
+		<br />
+		<h:commandButton id="btnMaiusvulo" value="Maiusculo"
+			action="#{letrasController.aumentarLetras}" />
+		<br />
+		<h:outputLabel value=" Maiusculo: #{letrasController.resultado00}" />
+		<br />
+		<h:commandButton id="btnMinusculo" value="Minusculo"
+			action="#{letrasController.diminuirLetras}" />
+		<br />
+		<h:outputLabel value=" Minusculo #{letrasController.resultado01}" />
+		<br />
+		<h> O que voce gosta de comer?</h>
+		<br />
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<h> Pastel </h>
+		<br />
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<h> Pizza </h>
+		<br />
+		<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+		<h> Lasanha </h>
+		<br />
+		<select name="Estados do Brasil">
+			<option value="PR">Parana</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="RS">Rio Grande Do Sul</option>
+		</select>
+		<br />
+		<br />
+
+		<p style="color: #FF0000">
+			<h> MOMENTO ENQUETE </h>
+		</p>
+		<h>O que voce prefere comer? </h>
+		<h:selectOneRadio value="Comidas">
+			<f:selectItem itemValue="1" itemLabel="Pizza" />
+			<f:selectItem itemValue="2" itemLabel="Pastel" />
+			<f:selectItem itemValue="3" itemLabel="Coxinha" />
+			<f:selectItem itemValue="4" itemLabel="Feijoada" />
+		</h:selectOneRadio>
+		<input type="text" name="Valor show" value="Insira um valor" />
+		<br />
+		<h:commandButton id="btnFormatar" value="Formatar Valor" 
+		action = "#{valorController.valor}"/>
+		<br />
+		<h:outputLabel value=" Valor: R$ #{valorController.resultado} ,00" />
+	</h:form>
+
+</h:body>
+</html>
